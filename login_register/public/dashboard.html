@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/js/dashboard.js" defer></script>
+</head>
+<body>
+  <main class="dashboard-card">
+    <h1>My Dashboard</h1>
+
+    <p id="status" role="status" aria-live="polite">
+      Checking your login...
+    </p>
+
+    <section id="profile" hidden>
+      <h2>Welcome, <span id="userName"></span>!</h2>
+      <p>Email: <span id="userEmail"></span></p>
+      <button id="logoutButton" type="button">Log out</button>
+    </section>
+  </main>
+</body>
+</html>
