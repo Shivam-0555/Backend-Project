@@ -19,10 +19,29 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       select: false
-    }
+    },
+    resetOtpHash: {
+  type: String,
+  select: false
+},
+resetOtpExpires: {
+  type: Date,
+  select: false
+},
+resetOtpAttempts: {
+  type: Number,
+  default: 0,
+  select: false
+},
+resetOtpVerified: {
+  type: Boolean,
+  default: false,
+  select: false
+}
   },
   { timestamps: true }
 );
+
 
 module.exports = mongoose.model("User", userSchema);
 

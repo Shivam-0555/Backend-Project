@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>My Dashboard</title>
   <link rel="stylesheet" href="/style.css">
   <script src="/js/dashboard.js" defer></script>
 </head>
@@ -17,8 +18,66 @@
 
     <section id="profile" hidden>
       <h2>Welcome, <span id="userName"></span>!</h2>
+
       <p>Email: <span id="userEmail"></span></p>
-      <button id="logoutButton" type="button">Log out</button>
+
+      <hr>
+
+      <h3>Edit Profile</h3>
+
+      <form id="profileForm">
+        <label for="nameInput">Your Name</label>
+        <input
+          type="text"
+          id="nameInput"
+          name="name"
+          maxlength="80"
+          required
+          autocomplete="name"
+        >
+
+        <button id="saveButton" type="submit">
+          Save Changes
+        </button>
+      </form>
+
+      <p id="profileMessage" role="status" aria-live="polite"></p>
+      
+<hr>
+
+<h3>Change Password</h3>
+
+<form id="passwordForm">
+  <label for="currentPassword">Current Password</label>
+  <input
+    type="password"
+    id="currentPassword"
+    name="currentPassword"
+    autocomplete="current-password"
+    required
+  >
+
+  <label for="newPassword">New Password</label>
+  <input
+    type="password"
+    id="newPassword"
+    name="newPassword"
+    minlength="8"
+    maxlength="72"
+    autocomplete="new-password"
+    required
+  >
+
+  <button id="passwordButton" type="submit">
+    Change Password
+  </button>
+</form>
+
+<p id="passwordMessage" role="status" aria-live="polite"></p>
+
+      <button id="logoutButton" type="button">
+        Log out
+      </button>
     </section>
   </main>
 </body>

@@ -17,11 +17,11 @@ if (!process.env.MONGO_URI || !process.env.SESSION_SECRET) {
   throw new Error("MONGO_URI and SESSION_SECRET are required.");
 }
 
-store: MongoStore.create({
-  mongoUrl: process.env.MONGO_URI,
-  collectionName: "sessions",
-  ttl: 14 * 24 * 60 * 60,
-}),
+// store: MongoStore.create({
+//   mongoUrl: process.env.MONGO_URI,
+//   collectionName: "sessions",
+//   ttl: 14 * 24 * 60 * 60,
+// }),
 
 // Basic security
 app.disable("x-powered-by");
